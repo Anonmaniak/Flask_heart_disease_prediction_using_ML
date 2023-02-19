@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To check your Heart disease</title>
+    <style>
+      * {
+        text-align: center;
+        font-size: medium;
+        font-family: "Courier New", Courier, monospace;
+        font-style: normal;
+      }
+      label{
+          font-size:20px;
+      }
+    </style>
+  </head>
+
+  <body>
+      
+      
+          <h1>{{ output }}</h1>
+               
+      </script>
+    <div class="container-fluid">
+      <!-- output  -->
+      <h1 class="display-3 text-center bg-dark text-light mt-2">Heart Disease Prediction</h1>
+      <form name="passdata" action="/form" method="post">
+        <div class="form-group">
+          <label for="age">Age: </label>
+          <input type="number" name="age" class="form-control" required/>
+          <br />
+        </div>
+        <div class="form-group">
+          <label for="sex">sex: The persons sex (1 = male, 0 = female): </label>
+          <input type="number" name="sex" class="form-control" />
+          <br />
+        </div>
+        <div class="form-group">
+          <label for="">
+            <pre>
+cp: chest pain type
+                — Value 0: asymptomatic
+                — Value 1: atypical angina
+                — Value 2: non-anginal pain
+                — Value 3: typical angina:</pre
+            >
+          </label>
+          <input type="number" name="cp" class="form-control" min="0" max="3"/>
+          <br />
+        </div>
+        <div class="form-group">
+          <label for=""
+            >trestbps: The persons resting blood pressure (mm Hg on admission to
+            the hospital):</label
+          >
+          <input type="number" name="trestbps" class="form-control" required/>
+          <br />
+        </div>
+        <div class="form-group">
+          <label for=""
+            >chol: The person’s cholesterol measurement in mg/dl:
+          </label>
+          <input type="number" name="chol" class="form-control" required/>
+          <br />
+        </div>
+        <div class="form-group">
+          <label for=""
+            >fbs: The person’s fasting blood sugar (> 120 mg/dl, 1 = true; 0 =
+            false):
+          </label>
+          <input type="number" name="fbs" class="form-control" required/>
+          <br />
+        </div>
+        <div class="form-group">
+            <label for="">
+              <pre>
+                restecg: resting electrocardiographic results
+                    — Value 0: showing probable or definite left ventricular hypertrophy by Estes’ criteria
+                    — Value 1: normal
+                    — Value 2: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV):
+            </pre
+              >
+            </label>
+            <input type="number" name="restecg" class="form-control" required/>
+            <br />
+                
+        </div>
+        <div class="form-group">
+                
+            <label for=""
+              >thalach: The person’s maximum heart rate achieved:
+            </label>
+            <input type="number" name="thalach" class="form-control" required/>
+            <br />
+        </div>
+        <div class="form-group">
+                
+            <label for="">exang: Exercise induced angina (1 = yes; 0 = no): </label>
+            <input type="number" name="exang" class="form-control" required/>
+            <br />
+        </div>
+        <div class="form-group">
+                
+            <label for="">
+              <p>
+                oldpeak: ST depression induced by exercise relative to rest (‘ST’
+                relates to positions on the ECG plot. See more here):
+              </p>
+            </label>
+            <input type="number" name="oldpeak" class="form-control" required/>
+            <br />
+        </div>
+        <div class="form-group">
+                
+            <label for="">
+              <pre>
+                slope: the slope of the peak exercise ST segment — 0: downsloping; 1: flat; 2: upsloping
+    0: downsloping; 1: flat; 2: upsloping:
+            </pre
+              >
+            </label>
+            <input type="number" name="slope"   class="form-control" required/>
+            <br />
+        </div>
+        <br />
+        <div class="form-group">
+                
+            <label for="">ca: The number of major vessels (0–3): </label>
+            <input type="number" name="ca" min="0" max="3" class="form-control" required/>
+            <br />
+        </div>
+        <div class="form-group">
+                
+            <label for="">
+              <pre>
+                thal: A blood disorder called thalassemia Value 0: NULL (dropped from the dataset previously
+    Value 1: fixed defect (no blood flow in some part of the heart)
+    Value 2: normal blood flow
+    Value 3: reversible defect (a blood flow is observed but it is not normal):
+            </pre
+              >
+            </label>
+            <input type="number" name="thal" class="form-control" required/>
+            <br />
+        </div>
+
+        <input type="submit" value="Submit" class=" btn btn-dark bg-dark mb-3 btn-block btn-lg" required/>
+      </form>
+    </div>
+  </body>
+</html>
